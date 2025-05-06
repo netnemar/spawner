@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Spawner - Solana Launchpad',
   description: 'Launch your Solana project with Spawner',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/logo.png',
   },
   openGraph: {
     title: 'Spawner - Solana Launchpad',

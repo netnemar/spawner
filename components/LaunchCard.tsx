@@ -31,7 +31,11 @@ export function LaunchCard() {
       setHolders((prev) => (prev >= HOLDERS_MAX ? HOLDERS_MIN : prev + 1))
       setMarketCap((prev) => (prev >= MARKET_CAP_MAX ? MARKET_CAP_MIN : prev + getRandomInt(100, 800)))
     }, 1000)
-    return () => intervalRef.current && clearInterval(intervalRef.current)
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+      }
+    }
   }, [])
 
   // Clamp market cap
